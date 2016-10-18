@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\SignApp\openCVLibrary310\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e0642c437406adae30c54f011ce8839a252f04b4">
+        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\SignApp-openCVLibrary310-unspecified_0b891fec0e207ff8c1310d4e4b6ca6b446e6eafc.jar" />
+    </item>
+
+</items>
