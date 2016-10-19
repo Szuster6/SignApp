@@ -22,7 +22,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-
 public class MainActivity extends Activity implements SurfaceHolder.Callback {
 
     private static final String TAG = "MainActivity";
