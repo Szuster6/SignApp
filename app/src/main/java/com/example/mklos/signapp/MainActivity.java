@@ -27,12 +27,9 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     private static final String TAG = "MainActivity";
 
     static {
-        if(!OpenCVLoader.initDebug())
-        {
+        if (!OpenCVLoader.initDebug()) {
             Log.d(TAG, "OpenCV not loaded");
-        }
-        else
-        {
+        } else {
             Log.d(TAG, "OpenCV loaded");
         }
     }
@@ -44,6 +41,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback {
     Camera.PictureCallback rawCallback;
     Camera.ShutterCallback shutterCallback;
     Camera.PictureCallback jpegCallback;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
