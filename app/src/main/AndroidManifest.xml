@@ -7,10 +7,7 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="23" />
 
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
-    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />
-    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT"/>
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" android:required="true"/>
     <uses-feature android:name="android.hardware.Camera.autofocus"/>
@@ -22,7 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:configChanges="orientation"
-        android:screenOrientation="portrait">
+        android:screenOrientation="portrait" >
 
         <activity android:name=".MainActivity">
             <intent-filter>
