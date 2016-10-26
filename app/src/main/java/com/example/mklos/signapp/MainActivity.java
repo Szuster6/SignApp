@@ -1,10 +1,15 @@
 package com.example.mklos.signapp;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View.OnTouchListener;
@@ -40,9 +45,10 @@ import java.util.List;
 
 public class MainActivity extends Activity implements OnTouchListener, CvCameraViewListener2 {
 
-    private static final String    TAG                 = "HandPose::MainActivity";
-    public static final int        JAVA_DETECTOR       = 0;
-    public static final int        NATIVE_DETECTOR     = 1;
+    private static final String TAG                     = "HandPose::MainActivity";
+    public static final int JAVA_DETECTOR               = 0;
+    public static final int NATIVE_DETECTOR             = 1;
+    private static final int CAMERA_PERMISSIONS_REQUEST = 1;
 
     private Mat  mRgba;
     private Mat  mGray;
@@ -53,10 +59,10 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private CustomSufaceView   mOpenCvCameraView;
     private List<Size> mResolutionList;
 
-    private SeekBar minTresholdSeekbar = null;
-    private SeekBar maxTresholdSeekbar = null;
+    private SeekBar minTresholdSeekbar      = null;
+    private SeekBar maxTresholdSeekbar      = null;
     private TextView minTresholdSeekbarText = null;
-    private TextView numberOfFingersText = null;
+    private TextView numberOfFingersText    = null;
 
     double iThreshold = 0;
 
@@ -105,6 +111,10 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
+
+        getPermissionToReadCamera();
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         if (!OpenCVLoader.initDebug()) {
             // Handle initialization error
@@ -385,7 +395,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
     }
 
-/*
+
     @TargetApi(23)
     public void getPermissionToReadCamera() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
@@ -407,7 +417,6 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
             } else {
                 Toast.makeText(this, "Camera permission denied", Toast.LENGTH_SHORT).show();
                     }}}
-*/
 
 
 }
