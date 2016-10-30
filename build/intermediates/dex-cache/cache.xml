@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="7d274d1160172d770c79ea4bc008a2970e748c26">
+        sha1="92a6dafb2e276b12f284986a00fc7270559818e4">
         <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_407c4b8d11d686ba87bbe4b109290ab5b876362a\classes.dex" />
     </item>
     <item
@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="38920c512fa042ececc01a5441b9b6405f48e42c">
+        sha1="3acdfa49a79c4366692562899dcbafc2bdfaaf4b">
         <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a496a6cac2209410805d373c31b3b292319f0430\classes.dex" />
     </item>
     <item

@@ -8,9 +8,11 @@
         android:targetSdkVersion="23" />
 
     <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
-
-    <uses-feature android:name="android.hardware.camera" android:required="true"/>
-    <uses-feature android:name="android.hardware.Camera.autofocus"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front.autofocus" android:required="false"/>
 
     <application
         android:allowBackup="true"
@@ -18,7 +20,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:configChanges="orientation"
+        android:configChanges="keyboardHidden|orientation"
         android:screenOrientation="portrait" >
 
         <activity android:name=".MainActivity">
