@@ -17,7 +17,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="top"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:id="@+id/cameraView">
 
             <com.example.mklos.signapp.CustomSufaceView
                 android:id="@+id/main_surface_view"

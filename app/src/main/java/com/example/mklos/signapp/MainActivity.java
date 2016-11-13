@@ -12,9 +12,11 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.SurfaceHolder;
 import android.view.View.OnTouchListener;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -114,7 +116,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
         getPermissionToReadCamera();
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         if (!OpenCVLoader.initDebug()) {
             // Handle initialization error
@@ -127,6 +129,8 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         setContentView(R.layout.main_surface_view);
 
         mOpenCvCameraView = (CustomSufaceView) findViewById(R.id.main_surface_view);
+
+
         mOpenCvCameraView.setCvCameraViewListener(this);
 
         minTresholdSeekbarText = (TextView) findViewById(R.id.textView3);
@@ -211,7 +215,6 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         SPECTRUM_SIZE = new Size(200, 64);
         CONTOUR_COLOR = new Scalar(255,0,0,255);
         CONTOUR_COLOR_WHITE = new Scalar(255,255,255,255);
-
     }
 
     public void onCameraViewStopped() {

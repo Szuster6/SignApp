@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">W Mig</string>
+    <string name="app_name">SignApp</string>
     <string-array name="signs">
         <item>Litera/Znak</item>
     </string-array>
