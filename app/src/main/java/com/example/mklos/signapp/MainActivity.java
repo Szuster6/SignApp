@@ -12,14 +12,16 @@ import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
-import android.view.SurfaceHolder;
 import android.view.View.OnTouchListener;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.LinearLayout;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.BaseLoaderCallback;
@@ -55,6 +57,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private Mat  mRgba;
     private Mat  mGray;
     private Mat mIntermediateMat;
+    public boolean menu = true;
 
     private int mDetectorType = JAVA_DETECTOR;
 
@@ -110,13 +113,34 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Log.i(TAG, "Instantiated new " + this.getClass());
     }
 
+    public void sendMessage(View view)
+    {
+        Button start = (Button)findViewById(R.id.buttonStart);
+        ImageView logo = (ImageView)findViewById(R.id.logo);
+        RelativeLayout back = (RelativeLayout)findViewById(R.id.background);
+
+        ViewGroup layout = (ViewGroup) start.getParent();
+        if(null!=layout) //for safety only  as you are doing onClick
+            layout.removeView(start);
+
+        layout = (ViewGroup) logo.getParent();
+        if(null!=layout) //for safety only  as you are doing onClick
+            layout.removeView(logo);
+
+        layout = (ViewGroup) back.getParent();
+        if(null!=layout) //for safety only  as you are doing onClick
+            layout.removeView(back);
+
+    }
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
 
+
         getPermissionToReadCamera();
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         if (!OpenCVLoader.initDebug()) {
             // Handle initialization error
@@ -126,11 +150,10 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         super.onCreate(savedInstanceState);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
+
         setContentView(R.layout.main_surface_view);
 
         mOpenCvCameraView = (CustomSufaceView) findViewById(R.id.main_surface_view);
-
-
         mOpenCvCameraView.setCvCameraViewListener(this);
 
         minTresholdSeekbarText = (TextView) findViewById(R.id.textView3);
@@ -215,6 +238,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         SPECTRUM_SIZE = new Size(200, 64);
         CONTOUR_COLOR = new Scalar(255,0,0,255);
         CONTOUR_COLOR_WHITE = new Scalar(255,255,255,255);
+
     }
 
     public void onCameraViewStopped() {

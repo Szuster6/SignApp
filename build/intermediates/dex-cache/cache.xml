@@ -2,67 +2,76 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\SignApp\openCVLibrary310\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8d3f5baeb70b3c1116ff66cdc5399050361a2aef">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\SignApp-openCVLibrary310-unspecified_0b891fec0e207ff8c1310d4e4b6ca6b446e6eafc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_746e2c3307a789bce4c12d5faaf34a26f7104afe.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_d05b53da2e90e2278d5a9e05342f9f1024b8d87d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_d1b0312c18af4bacbcb7bc10c133ebb13766cf33.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_bde6f835a0d490011949f8e85042b7dd9667afe9.jar" />
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.3.0_3c05c0513ab68faeb4c5b2811877d33c74a751c8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_e4236d98b4ddf46864bc28e25bae1977805090c2.jar" />
+        sha1="92a6dafb2e276b12f284986a00fc7270559818e4">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_407c4b8d11d686ba87bbe4b109290ab5b876362a\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="23.0.3"
         sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_7eae8af4187f636d76b295ffe3a922b0bc51eb96.jar" />
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.3.0_347e431395cee3806f3f053822430ad3a3892e13\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.3.0_1ebcad32721911d6740ec385a9cf6b57bdd943c5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_f8f88e8cb0f23152456a676b8ee1ccfb4fc4be7b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3acdfa49a79c4366692562899dcbafc2bdfaaf4b">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_a496a6cac2209410805d373c31b3b292319f0430\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.3.0_9f6c0f218476e7fb44ae627360fce48f20eecee0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="C:\Users\Bodzaro\Downloads\Projekt\SignApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.3.0_b3e3957222694f035462f1497183582e5e53854c\classes.dex" />
     </item>
 
 </items>

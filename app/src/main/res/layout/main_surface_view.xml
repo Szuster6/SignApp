@@ -17,8 +17,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="top"
-            android:orientation="vertical"
-            android:id="@+id/cameraView">
+            android:orientation="vertical" >
 
             <com.example.mklos.signapp.CustomSufaceView
                 android:id="@+id/main_surface_view"
@@ -42,7 +41,8 @@
                 android:gravity="bottom"
                 android:orientation="vertical"
                 android:paddingBottom="10dp"
-                android:paddingLeft="10dp" >
+                android:paddingLeft="10dp"
+                android:id="@+id/linearLayout">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -84,6 +84,32 @@
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textSize="115dp"
                 android:textColor="#ff0000"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#444ce4"
+                android:id="@+id/background">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="START"
+                    android:id="@+id/buttonStart"
+                    android:layout_marginBottom="57dp"
+                    android:onClick="sendMessage"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/logo"
+                    android:src="@drawable/logo"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="33dp" />
+            </RelativeLayout>
 
         </RelativeLayout>
 
