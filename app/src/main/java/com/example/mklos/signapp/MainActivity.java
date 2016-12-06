@@ -63,6 +63,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private SeekBar maxTresholdSeekbar      = null;
     private TextView minTresholdSeekbarText = null;
     private TextView numberOfFingersText    = null;
+    private String FingersSigns             = null;
 
     double iThreshold = 0;
 
@@ -201,6 +202,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Camera.Parameters cParams = mOpenCvCameraView.getParameters();
         cParams.setFocusMode(Camera.Parameters.FOCUS_MODE_INFINITY);
         mOpenCvCameraView.setParameters(cParams);
+
         Toast.makeText(this, "Focus mode : "+cParams.getFocusMode(), Toast.LENGTH_SHORT).show();
 
         mRgba = new Mat(height, width, CvType.CV_8UC4);
@@ -382,6 +384,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         this.numberOfFingers = listPoDefect.size();
         if(this.numberOfFingers > 5) this.numberOfFingers = 5;
 
+
         mHandler.post(mUpdateFingerCountResults);
 
         for(Point p : listPoDefect){
@@ -392,7 +395,20 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     }
 
     public void updateNumberOfFingers(){
-        numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
+        //numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
+        FingersSigns = String.valueOf(this.numberOfFingers);
+        if (FingersSigns == "0"){
+            numberOfFingersText.setText("A-0");
+        }else if (FingersSigns == "1"){
+            numberOfFingersText.setText("D-1");
+        }else if (FingersSigns == "2"){
+            numberOfFingersText.setText("V-2");
+        }else if (FingersSigns == "3"){
+            numberOfFingersText.setText("W-3");
+        }else if (FingersSigns == "4"){
+            numberOfFingersText.setText("C-4");
+        }
+
     }
 
 
