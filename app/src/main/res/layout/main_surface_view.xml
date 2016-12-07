@@ -74,6 +74,14 @@
                     android:layout_marginTop="103dp" />
 
                 <Button
+                    android:text="EMO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emotikony"
+                    android:layout_weight="1"
+                    android:onClick="sendMessage2" />
+
+                <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Send SMS"

@@ -73,6 +73,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private TextView numberOfFingersText    = null;
 
     private Button save    = null;
+    private Button emo    = null;
     private TextView text22    = null;
     private TextView text33    = null;
     private TextView text44    = null;
@@ -147,10 +148,14 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
             layout.removeView(back);
 
     }
-
+    public int kk=0;
     public void sendMessage2(View view)
     {
-        sendSMSMessage();
+        emo = (Button) findViewById(R.id.emotikony);
+        kk=1;
+
+
+
     }
 
     protected void sendSMSMessage() {
@@ -220,6 +225,8 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         minTresholdSeekbar.setProgress(8700);
         save = (Button) findViewById(R.id.buttonSave);
         save.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -462,16 +469,31 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     public void updateNumberOfFingers(){
         numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
         FingersSigns = String.valueOf(this.numberOfFingers);
-        if (FingersSigns == "0"){
-            numberOfFingersText.setText("A-0");
-        }else if (FingersSigns == "1"){
-            numberOfFingersText.setText("D-1");
-        }else if (FingersSigns == "2"){
-            numberOfFingersText.setText("V-2");
-        }else if (FingersSigns == "3"){
-            numberOfFingersText.setText("W-3");
-        }else if (FingersSigns == "4"){
-            numberOfFingersText.setText("C-4");
+        if (kk==0) {
+            if (FingersSigns == "0") {
+                numberOfFingersText.setText("A-0");
+            } else if (FingersSigns == "1") {
+                numberOfFingersText.setText("D-1");
+            } else if (FingersSigns == "2") {
+                numberOfFingersText.setText("V-2");
+            } else if (FingersSigns == "3") {
+                numberOfFingersText.setText("W-3");
+            } else if (FingersSigns == "4") {
+                numberOfFingersText.setText("C-4");
+            }
+        }
+        else if(kk==1){
+            if (FingersSigns == "0") {
+                numberOfFingersText.setText("\u1F601");
+            } else if (FingersSigns == "1") {
+                numberOfFingersText.setText("\u1F50");
+            } else if (FingersSigns == "2") {
+                numberOfFingersText.setText("emo3");
+            } else if (FingersSigns == "3") {
+                numberOfFingersText.setText("emo4");
+            } else if (FingersSigns == "4") {
+                numberOfFingersText.setText("emo5");
+            }
         }
     }
 
@@ -502,7 +524,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     @Override
 
     public void onClick(View v) {
-
+        kk=1;
         String value4 = text55.getText().toString();
         String value3 = text44.getText().toString();
         String value2 = text33.getText().toString();

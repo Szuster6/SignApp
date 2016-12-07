@@ -3,66 +3,66 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\SignApp\openCVLibrary310\unspecified\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="8d3f5baeb70b3c1116ff66cdc5399050361a2aef">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\SignApp-openCVLibrary310-unspecified_0b891fec0e207ff8c1310d4e4b6ca6b446e6eafc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_746e2c3307a789bce4c12d5faaf34a26f7104afe.jar" />
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_40d925d1a7acd5a94f985e20e7e0581db5d406c7.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="D:\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.3"
-        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_d05b53da2e90e2278d5a9e05342f9f1024b8d87d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_d1b0312c18af4bacbcb7bc10c133ebb13766cf33.jar" />
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_0058ca76cb1eca20ce4056c64c1d90979faa156a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jar="C:\Users\Piotr\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
-        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_bde6f835a0d490011949f8e85042b7dd9667afe9.jar" />
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_87a01098848644a921b938ea2739c910a027e588.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_e4236d98b4ddf46864bc28e25bae1977805090c2.jar" />
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_557148580419b0d2f67bb4c90aba192a2f10bc6d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\SignApp\openCVLibrary310\unspecified\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="77bc8780ede48f21e63e7e164199690f01cd5a7a">
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\SignApp-openCVLibrary310-unspecified_25b0d355e50fd0d4f99161fedf00463e4bb91807.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.3"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_0572f4411425a7242a46d4d101f003675cb4d134.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.3"
         sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
-        <dex dex="C:\Users\mklos\Documents\Projekty\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_7eae8af4187f636d76b295ffe3a922b0bc51eb96.jar" />
+        <dex dex="C:\Users\Piotr\Desktop\SignApp\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_5d1883973111efdb4f8bb381db0f20563ac56873.jar" />
     </item>
 
 </items>
