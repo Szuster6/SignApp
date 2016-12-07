@@ -90,6 +90,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private Scalar CONTOUR_COLOR;
     private Scalar CONTOUR_COLOR_WHITE;
     private String message;
+    private String phone_number;
 
     final Handler mHandler = new Handler();
     int numberOfFingers = 0;
@@ -129,6 +130,9 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Button start = (Button)findViewById(R.id.buttonStart);
         ImageView logo = (ImageView)findViewById(R.id.logo);
         RelativeLayout back = (RelativeLayout)findViewById(R.id.background);
+        EditText txtphoneNo = (EditText)findViewById(R.id.number);
+
+        phone_number = txtphoneNo.getText().toString();
 
         ViewGroup layout = (ViewGroup) start.getParent();
         if(null!=layout) //for safety only  as you are doing onClick
@@ -151,20 +155,10 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
     protected void sendSMSMessage() {
         Log.i("Send SMS", "");
-        EditText txtphoneNo = (EditText) findViewById(R.id.number);
-        String phoneNo = "507986734";
-
-        if(txtphoneNo.getText().toString() != "") {
-            phoneNo = txtphoneNo.getText().toString();
-        }
-        else
-        {
-            phoneNo = "507986734";
-        }
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
-            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            smsManager.sendTextMessage(phone_number, null, message, null, null);
             Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
         }
 
