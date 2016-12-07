@@ -426,11 +426,15 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
         List<MatOfPoint> defectPoints = new LinkedList<MatOfPoint>();
         List<Point> listPoDefect = new LinkedList<Point>();
+        List<Point> fingerTips = new LinkedList<Point>();
+
         for (int j = 0; j < convexDefect.toList().size(); j = j+4) {
             Point farPoint = contours.get(boundPos).toList().get(convexDefect.toList().get(j+2));
+            Point tips = contours.get(boundPos).toList().get(convexDefect.toList().get(j));
             Integer depth = convexDefect.toList().get(j+3);
             if(depth > iThreshold && farPoint.y < a){
                 listPoDefect.add(contours.get(boundPos).toList().get(convexDefect.toList().get(j+2)));
+                fingerTips.add(contours.get(boundPos).toList().get(convexDefect.toList().get(j)));
             }
             Log.d(TAG, "defects ["+j+"] " + convexDefect.toList().get(j+3));
         }
@@ -442,7 +446,9 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Log.d(TAG, "hull: " + hull.toList());
         Log.d(TAG, "defects: " + convexDefect.toList());
 
-        Imgproc.drawContours(mRgba, hullPoints, -1, CONTOUR_COLOR, 3);
+        //Imgproc.drawContours(mRgba, hullPoints, -1, CONTOUR_COLOR, 3);
+
+        //Imgproc.drawContours(mRgba, defectPoints, -1, CONTOUR_COLOR_WHITE, 3);
 
         int defectsTotal = (int) convexDefect.total();
         Log.d(TAG, "Defect total " + defectsTotal);
@@ -452,8 +458,13 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
         mHandler.post(mUpdateFingerCountResults);
 
+        for(Point p : fingerTips){
+            Imgproc.circle(mRgba, p, 10, new Scalar(0,255,0), -1);
+        }
+
+
         for(Point p : listPoDefect){
-            Imgproc.circle(mRgba, p, 6, new Scalar(255,0,255));
+            Imgproc.circle(mRgba, p, 8, new Scalar(255,0,255), -1);
         }
 
         return mRgba;
