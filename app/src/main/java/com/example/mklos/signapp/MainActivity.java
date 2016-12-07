@@ -8,7 +8,6 @@ import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -152,13 +151,18 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     public void sendMessage2(View view)
     {
         emo = (Button) findViewById(R.id.emotikony);
-        kk=1;
-
-
-
+        kk+=1;
+        if(kk > 2)
+            kk=0;
     }
 
-    protected void sendSMSMessage() {
+    public void sendMessage3(View view)
+    {
+        sendSMS();
+    }
+
+
+    protected void sendSMS() {
         Log.i("Send SMS", "");
 
         try {
@@ -480,18 +484,23 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     public void updateNumberOfFingers(){
         numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
         FingersSigns = String.valueOf(this.numberOfFingers);
+        Button bt = (Button)findViewById(R.id.emotikony);
         if (kk==0) {
             if (FingersSigns == "0") {
-                numberOfFingersText.setText("A-0");
+                numberOfFingersText.setText("A");
             } else if (FingersSigns == "1") {
-                numberOfFingersText.setText("D-1");
+                numberOfFingersText.setText("D");
             } else if (FingersSigns == "2") {
-                numberOfFingersText.setText("V-2");
+                numberOfFingersText.setText("V");
             } else if (FingersSigns == "3") {
-                numberOfFingersText.setText("W-3");
+                numberOfFingersText.setText("W");
             } else if (FingersSigns == "4") {
-                numberOfFingersText.setText("C-4");
+                numberOfFingersText.setText("C");
             }
+            else if (FingersSigns == "5") {
+                numberOfFingersText.setText("S");
+            }
+            bt.setText("Litery");
         }
         else if(kk==1){
             if (FingersSigns == "0") {
@@ -505,6 +514,21 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
             } else if (FingersSigns == "4") {
                 numberOfFingersText.setText("emo5");
             }
+            bt.setText("Emotikony");
+        }
+        else if(kk==2){
+            if (FingersSigns == "0") {
+                numberOfFingersText.setText("0");
+            } else if (FingersSigns == "1") {
+                numberOfFingersText.setText("1");
+            } else if (FingersSigns == "2") {
+                numberOfFingersText.setText("2");
+            } else if (FingersSigns == "3") {
+                numberOfFingersText.setText("3");
+            } else if (FingersSigns == "4") {
+                numberOfFingersText.setText("4");
+            }
+            bt.setText("Cyfry");
         }
     }
 
@@ -521,8 +545,8 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     @Override
     @TargetApi(23)
     public void onRequestPermissionsResult(int requestCode,
-                                           @NonNull String permissions[],
-                                           @NonNull int[] grantResults) {
+                                            String permissions[],
+                                            int[] grantResults) {
         if (requestCode == CAMERA_PERMISSIONS_REQUEST) {
             if (grantResults.length == 1 &&
                     grantResults[0] == PackageManager.PERMISSION_GRANTED) {

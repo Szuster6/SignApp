@@ -73,7 +73,7 @@
                     android:layout_marginTop="103dp" />
 
                 <Button
-                    android:text="EMO"
+                    android:text="Litery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/emotikony"
@@ -87,7 +87,7 @@
                     android:id="@+id/send_sms"
                     android:layout_below="@+id/logo"
                     android:layout_alignParentStart="true"
-                    android:onClick="sendMessage2" />
+                    android:onClick="sendMessage3" />
 
             </LinearLayout>
 
@@ -173,9 +173,8 @@
                 android:id="@+id/seekBar1"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:max="30000"
-                android:layout_alignTop="@+id/logo"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true" />
 
             <RelativeLayout
@@ -184,7 +183,8 @@
                 android:background="#444ce4"
                 android:id="@+id/background"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true">
+                android:layout_alignParentStart="true"
+                android:visibility="visible">
 
                 <Button
                     android:layout_width="wrap_content"
