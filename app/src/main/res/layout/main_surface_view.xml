@@ -23,8 +23,7 @@
                 android:id="@+id/main_surface_view"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                opencv:camera_id="any"
-                opencv:show_fps="true" />
+                opencv:camera_id="any" />
         </LinearLayout>
 
         <RelativeLayout
@@ -93,7 +92,6 @@
             </LinearLayout>
 
             <TextView
-                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/text6"
@@ -103,7 +101,6 @@
                 android:layout_toRightOf="@+id/text5" />
 
             <TextView
-                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/text5"
@@ -113,7 +110,6 @@
                 android:layout_toRightOf="@+id/text4"/>
 
             <TextView
-                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/text4"
@@ -123,7 +119,6 @@
                 android:layout_toRightOf="@+id/text3" />
 
             <TextView
-                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="36sp"
@@ -135,7 +130,6 @@
                 android:layout_toRightOf="@+id/text2" />
 
             <TextView
-                android:text="-"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="36sp"
@@ -153,7 +147,6 @@
             ]]>
 
             <TextView
-                android:text="TextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="24sp"
