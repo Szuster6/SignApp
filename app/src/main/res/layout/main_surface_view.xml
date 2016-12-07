@@ -74,6 +74,74 @@
             </LinearLayout>
 
             <TextView
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text6"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_centerVertical="true"
+                android:textSize="36sp"
+                android:layout_toRightOf="@+id/text5" />
+
+            <TextView
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text5"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_centerVertical="true"
+                android:textSize="36sp"
+                android:layout_toRightOf="@+id/text4"/>
+
+            <TextView
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text4"
+                android:textColor="@android:color/holo_green_light"
+                android:layout_centerVertical="true"
+                android:textSize="36sp"
+                android:layout_toRightOf="@+id/text3" />
+
+            <TextView
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+
+                android:layout_centerVertical="true"
+
+                android:textColor="@android:color/holo_green_light"
+                android:id="@+id/text3"
+                android:layout_toRightOf="@+id/text2" />
+
+            <TextView
+                android:text="-"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:layout_centerVertical="true"
+
+                android:id="@+id/text2"
+                android:layout_toRightOf="@+id/text1"
+                android:textColor="@android:color/holo_green_light" /><![CDATA[
+                android:id="@+id/textView4" />
+
+            android:id="@+id/textView5" />
+
+            ]]>
+
+            <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_centerVertical="true"
+                tools:textColor="@android:color/holo_green_light"
+                android:id="@+id/text1" />
+                android:id="@+id/textView6" />
+
+            <TextView
                 android:id="@+id/numberOfFingers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,11 +153,22 @@
                 android:textSize="115dp"
                 android:textColor="#ff0000"/>
 
+            <Button
+                android:text="Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonSave"
+                android:layout_below="@+id/logo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="103dp" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#444ce4"
-                android:id="@+id/background">
+                android:id="@+id/background"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -109,6 +188,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="33dp" />
+
             </RelativeLayout>
 
         </RelativeLayout>

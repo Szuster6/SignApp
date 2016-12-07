@@ -47,7 +47,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class MainActivity extends Activity implements OnTouchListener, CvCameraViewListener2 {
+public class MainActivity extends Activity implements OnTouchListener, CvCameraViewListener2, View.OnClickListener {
 
     private static final String TAG                     = "HandPose::MainActivity";
     public static final int JAVA_DETECTOR               = 0;
@@ -58,6 +58,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private Mat  mGray;
     private Mat mIntermediateMat;
     public boolean menu = true;
+    public String FingersSigns;
 
     private int mDetectorType = JAVA_DETECTOR;
 
@@ -69,6 +70,12 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private TextView minTresholdSeekbarText = null;
     private TextView numberOfFingersText    = null;
 
+    private Button save    = null;
+    private TextView text22    = null;
+    private TextView text33    = null;
+    private TextView text44    = null;
+    private TextView text55    = null;
+    private TextView text66    = null;
     double iThreshold = 0;
 
     private Scalar mBlobColorHsv;
@@ -108,6 +115,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
             }
         }
     };
+
 
     public MainActivity() {
         Log.i(TAG, "Instantiated new " + this.getClass());
@@ -160,7 +168,11 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
 
         numberOfFingersText = (TextView) findViewById(R.id.numberOfFingers);
-
+        text22 = (TextView) findViewById(R.id.text2);
+        text33 = (TextView) findViewById(R.id.text3);
+        text44 = (TextView) findViewById(R.id.text4);
+        text55 = (TextView) findViewById(R.id.text5);
+        text66 = (TextView) findViewById(R.id.text6);
         minTresholdSeekbar = (SeekBar)findViewById(R.id.seekBar1);
         minTresholdSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             int progressChanged = 0;
@@ -179,6 +191,8 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
             }
         });
         minTresholdSeekbar.setProgress(8700);
+        save = (Button) findViewById(R.id.buttonSave);
+        save.setOnClickListener(this);
     }
 
     @Override
@@ -420,6 +434,18 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
     public void updateNumberOfFingers(){
         numberOfFingersText.setText(String.valueOf(this.numberOfFingers));
+        FingersSigns = String.valueOf(this.numberOfFingers);
+        if (FingersSigns == "0"){
+            numberOfFingersText.setText("A-0");
+        }else if (FingersSigns == "1"){
+            numberOfFingersText.setText("D-1");
+        }else if (FingersSigns == "2"){
+            numberOfFingersText.setText("V-2");
+        }else if (FingersSigns == "3"){
+            numberOfFingersText.setText("W-3");
+        }else if (FingersSigns == "4"){
+            numberOfFingersText.setText("C-4");
+        }
     }
 
 
@@ -445,6 +471,23 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
                 Toast.makeText(this, "Camera permission denied", Toast.LENGTH_SHORT).show();
                     }}}
 
+    public int k=1;
+    @Override
+
+    public void onClick(View v) {
+        String value4 = text55.getText().toString();
+        String value3 = text44.getText().toString();
+        String value2 = text33.getText().toString();
+        String value1 = text22.getText().toString();
+        String value = numberOfFingersText.getText().toString();
+        text22.setText(value);
+        text33.setText(value1);
+        text44.setText(value2);
+        text55.setText(value3);
+        text66.setText(value4);
+
+
+    }
 
 }
 
