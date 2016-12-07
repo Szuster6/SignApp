@@ -16,12 +16,14 @@ import android.view.View.OnTouchListener;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
+import android.telephony.SmsManager;
 
 import org.opencv.android.OpenCVLoader;
 import org.opencv.android.BaseLoaderCallback;
@@ -87,6 +89,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     private Size SPECTRUM_SIZE;
     private Scalar CONTOUR_COLOR;
     private Scalar CONTOUR_COLOR_WHITE;
+    private String message;
 
     final Handler mHandler = new Handler();
     int numberOfFingers = 0;
@@ -121,7 +124,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         Log.i(TAG, "Instantiated new " + this.getClass());
     }
 
-    public void sendMessage(View view)
+    public void sendMessage1(View view)
     {
         Button start = (Button)findViewById(R.id.buttonStart);
         ImageView logo = (ImageView)findViewById(R.id.logo);
@@ -139,6 +142,36 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         if(null!=layout) //for safety only  as you are doing onClick
             layout.removeView(back);
 
+    }
+
+    public void sendMessage2(View view)
+    {
+        sendSMSMessage();
+    }
+
+    protected void sendSMSMessage() {
+        Log.i("Send SMS", "");
+        EditText txtphoneNo = (EditText) findViewById(R.id.number);
+        String phoneNo = "507986734";
+
+        if(txtphoneNo.getText().toString() != "") {
+            phoneNo = txtphoneNo.getText().toString();
+        }
+        else
+        {
+            phoneNo = "507986734";
+        }
+
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNo, null, message, null, null);
+            Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+        }
+
+        catch (Exception e) {
+            Toast.makeText(getApplicationContext(), "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+            e.printStackTrace();
+        }
     }
 
     /** Called when the activity is first created. */
@@ -475,6 +508,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     @Override
 
     public void onClick(View v) {
+
         String value4 = text55.getText().toString();
         String value3 = text44.getText().toString();
         String value2 = text33.getText().toString();
@@ -486,6 +520,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
         text55.setText(value3);
         text66.setText(value4);
 
+        message = value + value1 + value2 + value3 + value4;
 
     }
 

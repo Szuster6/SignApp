@@ -64,12 +64,23 @@
 
                 </LinearLayout>
 
-                <SeekBar
-                    android:id="@+id/seekBar1"
-                    android:layout_width="300dp"
+                <Button
+                    android:text="Save"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:max="30000" />
+                    android:id="@+id/buttonSave"
+                    android:layout_below="@+id/logo"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="103dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send SMS"
+                    android:id="@+id/send_sms"
+                    android:layout_below="@+id/logo"
+                    android:layout_alignParentStart="true"
+                    android:onClick="sendMessage2" />
 
             </LinearLayout>
 
@@ -129,6 +140,8 @@
 
             android:id="@+id/textView5" />
 
+
+
             ]]>
 
             <TextView
@@ -138,8 +151,10 @@
                 android:textSize="24sp"
                 android:layout_centerVertical="true"
                 tools:textColor="@android:color/holo_green_light"
-                android:id="@+id/text1" />
+                android:id="@+id/text1" /><![CDATA[
                 android:id="@+id/textView6" />
+
+            ]]>
 
             <TextView
                 android:id="@+id/numberOfFingers"
@@ -153,14 +168,14 @@
                 android:textSize="115dp"
                 android:textColor="#ff0000"/>
 
-            <Button
-                android:text="Save"
-                android:layout_width="wrap_content"
+            <SeekBar
+                android:id="@+id/seekBar1"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/buttonSave"
-                android:layout_below="@+id/logo"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="103dp" />
+                android:layout_weight="1"
+                android:max="30000"
+                android:layout_alignTop="@+id/logo"
+                android:layout_alignParentStart="true" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -176,7 +191,7 @@
                     android:text="START"
                     android:id="@+id/buttonStart"
                     android:layout_marginBottom="57dp"
-                    android:onClick="sendMessage"
+                    android:onClick="sendMessage1"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true" />
 
@@ -188,6 +203,16 @@
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="33dp" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/number"
+                    android:hint="Enter Phone Number"
+                    android:phoneNumber="true"
+                    android:textColorHint="@color/abc_primary_text_material_dark"
+                    android:layout_above="@+id/buttonStart"
+                    android:layout_centerHorizontal="true" />
+
 
             </RelativeLayout>
 
