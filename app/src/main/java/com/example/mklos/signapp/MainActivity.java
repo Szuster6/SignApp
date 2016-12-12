@@ -559,19 +559,19 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
     @Override
 
     public void onClick(View v) {
-        kk=1;
+        String value5 = text66.getText().toString();
         String value4 = text55.getText().toString();
         String value3 = text44.getText().toString();
         String value2 = text33.getText().toString();
         String value1 = text22.getText().toString();
         String value = numberOfFingersText.getText().toString();
-        text22.setText(value);
-        text33.setText(value1);
-        text44.setText(value2);
-        text55.setText(value3);
-        text66.setText(value4);
+        text66.setText(value);
+        text33.setText(value3);
+        text44.setText(value4);
+        text55.setText(value5);
+        text22.setText(value2);
 
-        message = value + value1 + value2 + value3 + value4;
+        message = value1 + value2 + value3 + value4 + value;
 
     }
 
