@@ -158,7 +158,7 @@
             ]]>
 
             <TextView
-                android:id="@+id/numberOfFingers"
+                android:id="@+id/liczbaPalców"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"

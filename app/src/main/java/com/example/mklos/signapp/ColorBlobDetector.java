@@ -15,18 +15,22 @@ import org.opencv.core.MatOfPoint;
 import org.opencv.core.Scalar;
 import org.opencv.imgproc.Imgproc;
 
+
+
+
+
+
 public class ColorBlobDetector {
-    // Lower and Upper bounds for range checking in HSV color space
+    // Sprawdzanie górnej i dolnej granicy obiektu
     private Scalar mLowerBound = new Scalar(0);
     private Scalar mUpperBound = new Scalar(0);
-    // Minimum contour area in percent for contours filtering
+    // Jaką minimalnie powieszchnie obiekt zajmuje w stosunku do calosci
     private static double mMinContourArea = 0.1;
-    // Color radius for range checking in HSV color space
+    // Zasieg kolorów ręki:
     private Scalar mColorRadius = new Scalar(25,50,50,0);
     private Mat mSpectrum = new Mat();
     private List<MatOfPoint> mContours = new ArrayList<MatOfPoint>();
 
-    // Cache
     Mat mPyrDownMat = new Mat();
     Mat mHsvMat = new Mat();
     Mat mMask = new Mat();
@@ -36,6 +40,8 @@ public class ColorBlobDetector {
     public void setColorRadius(Scalar radius) {
         mColorRadius = radius;
     }
+
+
 
     public void setHsvColor(Scalar hsvColor) {
         double minH = (hsvColor.val[0] >= mColorRadius.val[0]) ? hsvColor.val[0]-mColorRadius.val[0] : 0;
@@ -84,7 +90,7 @@ public class ColorBlobDetector {
 
         Imgproc.findContours(mDilatedMask, contours, mHierarchy, Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
-        // Find max contour area
+        // największy kontur
         double maxArea = 0;
         Iterator<MatOfPoint> each = contours.iterator();
         while (each.hasNext()) {
@@ -94,7 +100,7 @@ public class ColorBlobDetector {
                 maxArea = area;
         }
 
-        // Filter contours by area and resize to fit the original image size
+        // skalowanie obrazu konturów
         mContours.clear();
         each = contours.iterator();
         while (each.hasNext()) {
