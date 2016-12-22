@@ -91,7 +91,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
     private Scalar mBlobColorHsv;
     private Scalar mBlobColorRgba;
-    private ColorBlobDetector mDetector;
+    private bloby mDetector;
     private Mat mSpectrum;
 
 
@@ -302,7 +302,7 @@ public class MainActivity extends Activity implements OnTouchListener, CvCameraV
 
 
         mRgba = new Mat(height, width, CvType.CV_8UC4);
-        mDetector = new ColorBlobDetector();
+        mDetector = new bloby();
         mSpectrum = new Mat();
         mBlobColorRgba = new Scalar(255);
         mBlobColorHsv = new Scalar(255);

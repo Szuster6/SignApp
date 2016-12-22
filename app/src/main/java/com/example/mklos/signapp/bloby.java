@@ -20,7 +20,7 @@ import org.opencv.imgproc.Imgproc;
 
 
 
-public class ColorBlobDetector {
+public class bloby {
     // Sprawdzanie górnej i dolnej granicy obiektu
     private Scalar mLowerBound = new Scalar(0);
     private Scalar mUpperBound = new Scalar(0);
